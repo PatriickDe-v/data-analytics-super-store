@@ -1,5 +1,6 @@
 SELECT City, Country, Region,
-FORMAT(sum(sales),2) as total_sales_for_region
+FORMAT (sum(discount),2) as total_discount
 FROM super_store.samplesuperstore
 GROUP BY City, Country, Region
-LIMIT 5;
+ORDER BY total_discount DESC
+LIMIT 10;

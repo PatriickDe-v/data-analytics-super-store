@@ -1,5 +1,6 @@
-SELECT Region, 
-FORMAT (sum(Profit),2) as total_profit_for_region
+SELECT City, Country, Region,
+FORMAT (sum(sales),2) as total_sales_for_region
 FROM super_store.samplesuperstore
-GROUP BY Region
-ORDER BY Region DESC;
+GROUP BY City, Country, Region
+ORDER BY total_sales_for_region DESC
+LIMIT 10;s
